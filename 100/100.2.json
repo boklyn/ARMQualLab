@@ -1,0 +1,40 @@
+{
+
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+
+  "contentVersion": "1.0.0.0",
+
+  "parameters": {
+    "storageAccountName": {
+      "type": "string"
+    },
+    "storageAccountType": {
+      "type": "string",
+       "defaultValue": "Standard_LRS"
+    }
+  },
+
+  "variables": {
+    "storageAccountNamevar": "placeholder"
+  },
+
+  "resources": [
+
+  ],
+
+  "outputs": {
+    "var": {
+      "type": "string",
+      "value": "[variables('storageAccountNamevar')]"
+    },
+    "parameter1": {
+      "type": "string",
+      "value": "[parameters('storageAccountName')]"
+    },
+    "parameter2": {
+        "type": "string",
+        "value": "[parameters('storageAccountType')]"
+      }
+    }
+  }
+
