@@ -7,11 +7,11 @@ The ARM Qual lab is designed as a self-teaching guide to allow users to able to 
 Level 100:
 ==========
 At level 100, if successfully completed, the user should have the skills to shadow an ARM engagement. The following scenarios are covered at the following level:
-Create a basic template to provision a storage account
-Understand the difference between ASM and ARM deployment models. 
-Understand best practices in creating and designing ARM templates. 
-Understand the structure of ARM templates and the relationship between the components. 
-Basic understanding of some ARM template functions.
+* Create a basic template to provision a storage account
+* Understand the difference between ASM and ARM deployment models. 
+* Understand best practices in creating and designing ARM templates. 
+* Understand the structure of ARM templates and the relationship between the components. 
+* Basic understanding of some ARM template functions.
 
 Level 200:
 ==========
@@ -21,7 +21,8 @@ Understand the different ways to pass parameters to an ARM template
 
 Level 300:
 ==========
-At level 300 if successfully completed the user should have the skills to be able to conduct a standard ARM engagement as a primary role. The following scenarios are covered at this level:
+At level 300 if successfully completed the user should have the skills to be able to conduct a standard ARM engagement as a primary role. 
+The following scenarios are covered at this level:
 Standard resource deployments
 Advanced understanding of ARM template functions.
 Requirement gathering and translation to ARM Template
