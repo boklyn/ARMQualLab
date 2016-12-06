@@ -3,9 +3,9 @@
 To complete this lab you will need to download Azure PowerShell and Visual Studio Express. You will create the ARM template in Visual Studio, and execute it through a PowerShell script.
 
 	1. Preparations
-		* Install Azure PowerShell
-		 * https://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/
-				1. If error occurs when executing Azure commands in PowerShell, run  "enable set-executionpolicy unrestricted". 
+		i Install Azure PowerShell
+		ii https://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/
+			*. If error occurs when executing Azure commands in PowerShell, run  "enable set-executionpolicy unrestricted". 
 		ii. Download and leverage Visual Studio Express with Azure SDK integration for VS 2015
 			* https://www.visualstudio.com/downloads/
 			* https://azure.microsoft.com/en-us/blog/announcing-visual-studio-azure-tools-and-sdk-2-9/
