@@ -2,11 +2,12 @@
 __Getting Started__
 ===============
 To complete this lab you will need to download Azure PowerShell and Visual Studio Express. You will create the ARM template in Visual Studio, and execute it through a PowerShell script.
+
 	1. Preparations
-		1. Install Azure PowerShell
+		i. Install Azure PowerShell
 			* https://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/
 				1. If error occurs when executing Azure commands in PowerShell, run  "enable set-executionpolicy unrestricted". 
-		2. Download and leverage Visual Studio Express with Azure SDK integration for VS 2015
+		ii. Download and leverage Visual Studio Express with Azure SDK integration for VS 2015
 			* https://www.visualstudio.com/downloads/
 			* https://azure.microsoft.com/en-us/blog/announcing-visual-studio-azure-tools-and-sdk-2-9/
 				1. To create a JSON file go to File> New File> Web >JSON
