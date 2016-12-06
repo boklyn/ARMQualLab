@@ -16,25 +16,25 @@ At level 100, if successfully completed, the user should have the skills to shad
 Level 200:
 ==========
 At level 200 if successfully completed, the user should have the skills to be able to participate in an ARM engagement as a secondary role to another primary resource. The following scenarios are covered at this level:
-Understand resource provisioning in sequence through dependencies. 
-Understand the different ways to pass parameters to an ARM template
+* Understand resource provisioning in sequence through dependencies. 
+* Understand the different ways to pass parameters to an ARM template
 
 Level 300:
 ==========
 At level 300 if successfully completed the user should have the skills to be able to conduct a standard ARM engagement as a primary role. 
 The following scenarios are covered at this level:
-Standard resource deployments
-Advanced understanding of ARM template functions.
-Requirement gathering and translation to ARM Template
-Quickly leverage and consume canned templates provided by the Azure GitHub template repository. 
+* Standard resource deployments
+* Advanced understanding of ARM template functions.
+* Requirement gathering and translation to ARM Template
+* Quickly leverage and consume canned templates provided by the Azure GitHub template repository. 
 
 Level 400:
 ==========
 At this level the user should have the following additional capabilities to that of Level 300:
-Able to discern resource properties value by looking up and navigating ARM schemas.
-Create advance template linking and be able to troubleshoot failures in secondary templates. 
-Leverage advance template provisioning with dynamic parameter injections. 
-Create automation code to be able to orchestrate provisioning of resources leveraging dynamic parameter injections 
+* Able to discern resource properties value by looking up and navigating ARM schemas.
+* Create advance template linking and be able to troubleshoot failures in secondary templates. 
+* Leverage advance template provisioning with dynamic parameter injections. 
+* Create automation code to be able to orchestrate provisioning of resources leveraging dynamic parameter injections 
 
 ARM Qual Lab scaling out:
 ========================= 
