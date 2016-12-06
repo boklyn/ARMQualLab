@@ -1,5 +1,5 @@
 #Level 100
-__Getting Started__
+Getting Started
 ===============
 To complete this lab you will need to download Azure PowerShell and Visual Studio Express. You will create the ARM template in Visual Studio, and execute it through a PowerShell script.
 
@@ -15,26 +15,26 @@ To complete this lab you will need to download Azure PowerShell and Visual Studi
 	2. Review resources:
 	https://azure.microsoft.com/en-us/documentation/articles/resource-group-authoring-templates/
 		i. Understand the concept of Expressions and Functions. 
-			• https://azure.microsoft.com/en-us/documentation/articles/resource-group-authoring-templates/#expressions-and-functions
+			â€¢ https://azure.microsoft.com/en-us/documentation/articles/resource-group-authoring-templates/#expressions-and-functions
 		ii. Understand the concept of parameters within JSON
-			• https://azure.microsoft.com/en-us/documentation/articles/resource-group-authoring-templates/#parameters
-			• Understand the usage of allowed values. 
+			â€¢ https://azure.microsoft.com/en-us/documentation/articles/resource-group-authoring-templates/#parameters
+			â€¢ Understand the usage of allowed values. 
 		iii. Understand the concept of variables. 
-			• https://azure.microsoft.com/en-us/documentation/articles/resource-group-authoring-templates/#variables
-			• Be able to answer: How are variables different from parameters? Why and when should they be used?
+			â€¢ https://azure.microsoft.com/en-us/documentation/articles/resource-group-authoring-templates/#variables
+			â€¢ Be able to answer: How are variables different from parameters? Why and when should they be used?
 		iv. Understand the concept of resources. 
-			• https://azure.microsoft.com/en-us/documentation/articles/resource-group-authoring-templates/#resources
+			â€¢ https://azure.microsoft.com/en-us/documentation/articles/resource-group-authoring-templates/#resources
 		v. Understand the concept of outputs
-			• https://azure.microsoft.com/en-us/documentation/articles/resource-group-authoring-templates/#outputs
+			â€¢ https://azure.microsoft.com/en-us/documentation/articles/resource-group-authoring-templates/#outputs
 		vi. Leverage the blank template located at: https://github.com/Azure/azure-quickstart-templates/tree/master/100-blank-template. Use the raw option and import into a JSON file in Visual Studio.
 		vii. Understanding PowerShell and Azure cmdlets: https://docs.microsoft.com/en-us/powershell/, and https://azure.microsoft.com/en-us/documentation/articles/resource-manager-template-walkthrough/#deploying-the-template
 			
 	Validation Phase:
 		a. Create your first Azure resource group PowerShell script with the following code:
 		$subid = ""
-			• Use the subscription ID from your personal Azure account
+			â€¢ Use the subscription ID from your personal Azure account
 		$location = "South Central US"
-			• You can choose a location closer to you (I.e. West US)
+			â€¢ You can choose a location closer to you (I.e. West US)
 		$newrgname = "testing"
 		
 		Add-AzureRmAccount
@@ -46,8 +46,8 @@ To complete this lab you will need to download Azure PowerShell and Visual Studi
 
 		where azuredeploy.json is your blank template. Run ARM PowerShell script to successfully deploy the blank JSON template.
 		
-		c. Add one parameter called "storageAccountType" to the JSON code with default value of "Standard_LRS" (type: string) and another parameter called "storageAccountName" without a default value (type: string). Use PowerShell to successfully execute your basic template successfully.  (Hint: Only run the last line of the PowerShell script each time you want to test your template)
-			• Recommend using an IDE or text editor that at the minimum understands JSON (e.g. Visual Studio, VS Code, etc.). Visual studio 2015 with Azure SDK installed is the preferred choice 
+		c. Add one parameter called "storageAccountType" to the JSON code with default value of "Standard_LRS" (type: string) and another parameter called "storageAccountName" without a default value (type: string). Use PowerShell to successfully execute your basic template successfully.Â  (Hint: Only run the last line of the PowerShell script each time you want to test your template)
+			â€¢ Recommend using an IDE or text editor that at the minimum understands JSON (e.g. Visual Studio, VS Code, etc.). Visual studio 2015 with Azure SDK installed is the preferred choice 
 		d. Add one variable called "storageAccountNamevar" with the string value of "placeholder" from the previous successfully executed template. Validate by successfully executing the template. 
 		e. Add an output section in the JSON template referencing each of the parameters and the variable created in the previous steps. Execute the template and confirm your output data is valid. For additional information pleas refer back to the 2v, "Understand the concept of outputs"
 		
