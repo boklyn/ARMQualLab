@@ -1,6 +1,5 @@
 #Level 100
-Getting Started
-===============
+## Getting Started ##
 To complete this lab you will need to download Azure PowerShell and Visual Studio Express. You will create the ARM template in Visual Studio, and execute it through a PowerShell script.
 
 	1. Preparations
