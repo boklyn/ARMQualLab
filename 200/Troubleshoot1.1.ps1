@@ -8,10 +8,3 @@ $templateFileURI = "https://raw.githubusercontent.com/boklyn/ARMQualLab/master/2
 $parameters = @{}
 
 $parameters.Add("storageAccountType","Standrd_GRS")
-
-$testResults = Test-AzureRmResourceGroupDeployment -ResourceGroupName $resourceGroupName -Mode Incremental `
-                                                   -TemplateUri $templateFileURI -TemplateParameterObject $parameters -Verbose
-
-Write-Host 
-Write-Host "Test Results" -ForegroundColor Green -NoNewline
-$testResults
