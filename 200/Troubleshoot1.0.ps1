@@ -7,7 +7,4 @@ $resourceGroupName = "TroubleshootingRG"
 $templateFileURI = "https://raw.githubusercontent.com/boklyn/ARMQualLab/master/200/Template1.json"
 $parameters = @{}
 
-$parameters.Add("storageAccountType","Standard_GRS")
-
-Test-AzureRmResourceGroupDeployment -ResourceGroupName $resourceGroupName -Mode Incremental `
-                                    -TemplateUri $templateFileURI -TemplateParameterObject $parameters -Verbose
+$parameters.Add("storageAccountType","Standrd_GRS")
