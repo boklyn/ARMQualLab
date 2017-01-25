@@ -1,0 +1,1 @@
+There is no way to leverage copyindex as part of an output value. You would probably get an error that states that copyindex can not be used outside of the copy fronts. 

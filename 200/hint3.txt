@@ -1,0 +1,3 @@
+here is the code to retrieve the first public ip resource: 
+
+"[reference(concat('Microsoft.Network/publicIPAddresses/',parameters('pubipnameformat'), '1'))]"
