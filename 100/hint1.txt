@@ -1,0 +1,1 @@
+Only run the last line of the PowerShell script each time you want to test your template
