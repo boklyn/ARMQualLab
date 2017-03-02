@@ -1,0 +1,25 @@
+		a. N/A
+		b. Template should be valid.
+		c. N/A
+		d. The parameter in the PowerShell script is not valid because of a typo. The following script is an example of how you could finish the rest of the script.
+			$testResults = Test-AzureRmResourceGroupDeployment -ResourceGroupName $resourceGroupName -Mode Incremental -TemplateUri $templateFileURI -TemplateParameterObject $parameters -Verbose
+			Write-Host 
+			Write-Host "Test Results" -ForegroundColor Green -NoNewline
+			$testResults
+		e. The portal should also display the same error message that the previous script should output as well.
+		f. N/A
+		g. Line 35 of the template attempts to reference a variable that does not exist. To fix the template, it could reference the parameter instead. The following script is an example of how you could finish the rest of the script.
+			$testResults = Test-AzureRmResourceGroupDeployment -ResourceGroupName $resourceGroupName -Mode Incremental -TemplateUri $templateFileURI -TemplateParameterObject $parameters -Verbose
+			Write-Host 
+			Write-Host "Test Results" -ForegroundColor Green -NoNewline
+			$testResults
+		h. N/A
+		i. The template is valid but the PowerShell script is attempting to create a storage account with 25 characters. The maximum length for a storage account cannot exceed 24 characters. The following script is an example of how you could finish the rest of the script.
+			$testResults = Test-AzureRmResourceGroupDeployment -ResourceGroupName $resourceGroupName -Mode Incremental -TemplateUri $templateFileURI -TemplateParameterObject $parameters -Verbose
+			Write-Host 
+			Write-Host "Test Results" -ForegroundColor Green -NoNewline
+			$testResults
+			Write-Host "Checking Details..." -ForegroundColor Green
+			$testResults.Details
+			Write-Host "Checking more Details..." -ForegroundColor Green
+      $testResults.Details.Details
