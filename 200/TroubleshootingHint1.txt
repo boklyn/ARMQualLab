@@ -1,0 +1,1 @@
+You may need to dig deeper into the error details in PowerShell. For example, if you set $testResults = Test-AzureRmResourceGroupDeployment -ResourceGroupName … etc., you can print the results with $testResults. You can dig deeper to get more results by printing $testResults.details.
