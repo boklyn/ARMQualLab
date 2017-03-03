@@ -1,0 +1,4 @@
+Hint 1: Think about the order of resources that need to be created in order to automate the entire deployment? 
+Hint 2: Most resources will have some dependencies but some can be done in parallel.
+Hint 3: What template function would you use to build identical virtual machines?
+Hint 4: Would all of these resources live in the same resource group?
