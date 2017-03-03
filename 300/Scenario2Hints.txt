@@ -1,0 +1,7 @@
+Hint 1: What would be required for hybrid connectivity from their on-premises infrastructure to Azure?
+Hint 2: What dependencies would these servers have? We already know it's a Windows ecosystem.
+Hint 3: Have you determined what operating system and application versions you are working with?
+Hint 4: If the customer answered all of your questions, will you be able to translate them into parameters for a templated solution?
+Hint 5: Are there going to be multiple environments (e.g. dev, test, QA, prod, etc.)?
+Hint 6: What certificates would be required for this solution?
+Hint 7: How will these servers be managed and secured? Patching, monitoring, logging, antivirus etc.
