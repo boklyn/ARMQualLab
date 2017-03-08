@@ -1,0 +1,49 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "variables": {
+    "apiVersionVar": "2015-05-01-preview"
+  },
+
+	"parameters": {
+		"pubIpNameFormat": {
+			"type": "string",
+			"defaultValue": "msft-pubip-"
+		},
+		"pubIpOffSet": {
+			"type": "int",
+			"defaultValue": 5
+		},
+
+		"pubIpCount": {
+			"type": "int",
+			"defaultValue": 2
+		}
+	},
+  "resources": [
+    {
+      "type": "Microsoft.Network/publicIPAddresses",
+      "name": "[concat(parameters('pubIpNameFormat'),copyIndex(parameters('pubIpOffSet')))]",
+      "apiVersion": "[variables('apiVersionVar')]",
+      "location": "[resourceGroup().location]",
+      "copy": {
+        "name": "publicipcopy",
+        "count": "[parameters('pubIpCount')]"
+      },
+      "comments": "This is the public ip resource",
+      "properties": {
+        "publicIPAllocationMethod": "Dynamic"
+      }
+    }
+  ],
+  "outputs": {
+    "pubIpName1": {
+      "type": "object",
+      "value": "[reference(concat('Microsoft.Network/publicIPAddresses/',parameters('pubipnameformat'), '5'))]"
+    },
+    "pubIpName2": {
+      "type": "object",
+      "value": "[reference(concat('Microsoft.Network/publicIPAddresses/',parameters('pubipnameformat'), '6'))]"
+    }
+  }
+}

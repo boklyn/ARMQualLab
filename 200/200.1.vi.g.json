@@ -1,0 +1,26 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "storageAccountName": { "type": "string" },
+    "containerSasToken": { "type": "string" }
+  },
+         "resources": [
+        {
+          "apiVersion": "2015-01-01",
+          "name": "premiumStorageTemplate",
+          "type": "Microsoft.Resources/deployments",
+          "properties": {
+            "mode": "incremental",
+            "templateLink": {
+              "uri": "[concat(uri(deployment().properties.templateLink.uri, 'linkedstandardstorage.json'), parameters('containerSasToken'))]",
+              "contentVersion": "1.0.0.0"
+            },
+            "parameters": {
+              "storageAccountName": { "value": "[parameters('storageAccountName')]" }
+            }
+          }
+        }
+      ]
+    }
+  
