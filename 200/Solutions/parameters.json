@@ -1,0 +1,30 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "pubIpNameFormat": {
+      "reference": {
+          "keyVault": {
+            "id": "/subscriptions/7e5e5a70-ae36-48e2-8847-698f22209035/resourcegroups/anikargvault/providers/Microsoft.KeyVault/vaults/anikavault"
+          },
+          "secretName": "pubIpNameFormat"
+        }
+    },
+    "pubIpOffSet": {
+       "reference": {
+          "keyVault": {
+            "id": "/subscriptions/7e5e5a70-ae36-48e2-8847-698f22209035/resourcegroups/anikargvault/providers/Microsoft.KeyVault/vaults/anikavault"
+          },
+          "secretName": "pubIpOffset"
+        }
+    },
+    "pubIpCount": {
+       "reference": {
+          "keyVault": {
+            "id": "/subscriptions/7e5e5a70-ae36-48e2-8847-698f22209035/resourcegroups/anikargvault/providers/Microsoft.KeyVault/vaults/anikavault"
+          },
+          "secretName": "pubIpCount"
+        }
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "variables": {
+    "apiVersionVar": "2015-05-01-preview",
+    "storageAccountNamevar": "[concat(parameters('storageAccountName'), 'end')]",
+     "location": "[resourceGroup().location]"
+  },
+
+  "parameters": {
+    "pubIpNameFormat": {
+      "type": "string",
+      "defaultValue": "msft-pubip-"
+    },
+    "pubIpOffSet": {
+      "type": "int",
+      "defaultValue": 5
+    },
+
+    "pubIpCount": {
+      "type": "int",
+      "defaultValue": 2
+    },
+    "tagValues": {
+      "type": "array",
+        "defaultValue": ["IT", "Contributor","Anika"]
+    },
+    "storageAccountName": {
+      "type": "string"
+    },
+    "storageAccountType": {
+      "type": "string",
+      "defaultValue": "Standard_LRS",
+      "allowedValues": [
+        "Standard_LRS",
+        "Standard_GRS",
+        "Standard_ZRS",
+        "Premium_LRS"
+      ],
+      "metadata": {
+        "description": "Storage Account type"
+      }
+    }
+  },
+
+  "resources": [
+    {
+      "type": "Microsoft.Network/publicIPAddresses",
+      "name": "[concat(parameters('pubIpNameFormat'),copyIndex(parameters('pubIpOffSet')))]",
+      "apiVersion": "[variables('apiVersionVar')]",
+      "location": "[resourceGroup().location]",
+      "tags": {
+        "Department": "[parameters('tagValues')[0]]",
+        "Role": "[parameters('tagValues')[1]]", 
+        "Owner":"[parameters('tagValues')[2]]"
+      },
+      "copy": {
+        "name": "publicipcopy",
+        "count": "[parameters('pubIpCount')]"
+      },
+      "comments": "This is the public ip resource",
+      "properties": {
+        "publicIPAllocationMethod": "Dynamic"
+      }
+    },
+    {
+      "type": "Microsoft.Storage/storageAccounts",
+      "name": "[variables('storageAccountNamevar')]",
+      "apiVersion": "2016-01-01",
+      "location": "[resourceGroup().location]",
+      "sku": { "name": "[parameters('storageAccountType')]" },
+      "kind": "Storage",
+      "comments": "This storage account is used to store the VM disks",
+      "properties": {
+      },
+      "dependsOn": [
+        "[concat('Microsoft.Network/publicIPAddresses/',parameters('pubipnameformat'), '5')]",
+        "[concat('Microsoft.Network/publicIPAddresses/',parameters('pubipnameformat'), '6')]"
+      ]
+    }
+      ],
+  "outputs": {
+    "pubIpName1": {
+      "type": "object",
+      "value": "[reference(concat('Microsoft.Network/publicIPAddresses/',parameters('pubipnameformat'), '5'))]"
+    },
+    "pubIpName2": {
+      "type": "object",
+      "value": "[reference(concat('Microsoft.Network/publicIPAddresses/',parameters('pubipnameformat'), '6'))]"
+    }
+  }
+}
