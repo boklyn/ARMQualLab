@@ -1,0 +1,30 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "pubIpName": {
+      "type": "string"
+    }
+  },
+  "variables": {
+    "apiVersionVar": "2015-05-01-preview"
+  },
+  "resources": [
+    {
+      "type": "Microsoft.Network/publicIPAddresses",
+      "name": "[parameters('pubIpName')]",
+      "apiVersion": "[variables('apiVersionVar')]",
+      "location": "[resourceGroup().location]",
+      "comments": "This is the public ip resource",
+      "properties": {
+        "publicIPAllocationMethod": "Dynamic"
+      }
+    }
+  ],
+  "outputs": {
+    "pubIpName": {
+      "type": "string",
+        "value": "[parameters('pubIpName')]"
+    }
+  }
+}
